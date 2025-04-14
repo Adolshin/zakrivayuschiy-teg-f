@@ -26,6 +26,15 @@ li {
   padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: initial;
+}
+
 a {
   color: inherit;
 }
@@ -37,6 +46,12 @@ input {
   font-size: inherit;
 }
 
+button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
 ul,
 ol {
   list-style: none;
@@ -44,10 +59,20 @@ ol {
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+img,
+svg {
+  display: block;
+}
+
+button:focus,
+button:focus-visible {
+  outline: none;
 }
