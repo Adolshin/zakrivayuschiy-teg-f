@@ -204,14 +204,16 @@
   transition: 0.1s linear;
 }
 
-.like-icon:hover .main-body {
-  fill: var(--contour-color);
-  transition: 0.3s 0.05s linear;
-}
-
-.like-icon:hover .core {
-  fill: var(--contour-color);
-  transition: 0.3s linear;
+@media (hover: hover) {
+  .like-icon:hover .main-body {
+    fill: var(--contour-color);
+    transition: 0.3s 0.05s linear;
+  }
+  
+  .like-icon:hover .core {
+    fill: var(--contour-color);
+    transition: 0.3s linear;
+  }
 }
 
 .like-icon:active .main-body {
