@@ -12,7 +12,7 @@
 
 .page {
   padding: 102px 0;
-  font-family: "Inter-Variable";
+  font-family: var(--main-font);
   font-size: var(--main-font-size);
   background-color: var(--bg-color);
   background-image: repeating-linear-gradient(
@@ -26,7 +26,6 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: "wght" var(--main-wght), 400;
 }
 .header {
   display: flex;
@@ -34,7 +33,7 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  margin-block-end: 91px;
+  margin-block-end: 100px;
   border: var(--border);
   padding: clamp(7.5rem, 6.9231rem + 2.4615vw, 8rem) 0; /* Исходил из того что макс ширина контентной области 700px*/
   font-family: var(--accent-font);
@@ -69,7 +68,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 50px;
-  margin-block-end: 59px;
+  margin-block-end: 50px;
   inline-size: 100%;
 }
 
@@ -85,9 +84,10 @@
 
 .card__title {
   border-block-end: var(--border);
-  padding: 4px 10px;
-  font-weight: var(--accent-wght);
+  padding: 3px 10px;
   font-size: var(--main-font-size);
+  line-height: 138.8%;
+  font-variation-settings: "wght" var(--accent-wght);
 }
 
 .card__image-wrapper {
@@ -162,10 +162,11 @@
 
 .card__text {
   line-height: 117%;
+  font-variation-settings: "wght" var(--main-wght);
 }
 
 .card__text:not(:last-child) {
-  margin-block-end: 27px;
+  margin-block-end: 26px;
 }
 
 .card__controls {
@@ -209,7 +210,7 @@
     fill: var(--contour-color);
     transition: 0.3s 0.05s linear;
   }
-  
+
   .like-icon:hover .core {
     fill: var(--contour-color);
     transition: 0.3s linear;
@@ -296,7 +297,7 @@
 
 .main__button {
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 15px 18px;
 }
 
 .button__icon {
@@ -356,9 +357,6 @@ body:has(.modal[open]) {
 }
 
 @media (width <= 376px) {
-  .header {
-    margin-block-end: 100px;
-  }
   .card__label {
     inset-inline-end: 13px;
   }
